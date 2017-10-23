@@ -8,7 +8,7 @@ node {
     stage('bootstrap') {
         dir(groovyScriptsPath) {
             sh """
-                git clone git@github.com:OGProgrammer/jenkins-pipeline-groovy.git --branch=master .
+                git clone git@github.com:alainetouches/jenkins-pipeline-groovy.git --branch=master .
             """
         }
         dir(groovyScriptsPath) {
@@ -63,7 +63,7 @@ node {
 
     stage ('deploy') {
         dir("terraform-aws-ecs-service") {
-            sh "git clone git@github.com:OGProgrammer/terraform-aws-ecs-service.git --branch=master ."
+            sh "git clone git@github.com:alainetouches/terraform-aws-ecs-service.git --branch=master ."
             writeFile file: 'variables.tfvars', text: tfvars_file_data
             sh "./tf-${action}.sh variables.tfvars"
         }

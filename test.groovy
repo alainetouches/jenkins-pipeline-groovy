@@ -8,7 +8,7 @@ node {
     stage('bootstrap') {
         dir(groovy_scripts_path) {
             sh """
-                git clone git@github.com:OGProgrammer/jenkins-pipeline-groovy.git --branch=master .
+                git clone git@github.com:alainetouches/jenkins-pipeline-groovy.git --branch=master .
             """
         }
         dir(groovy_scripts_path) {

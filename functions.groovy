@@ -112,7 +112,7 @@ def getDockerManifest()
  */
 def getManifest(branch) {
     def directory = "manifest-${branch}"
-    def manifest_repository = "${MANIFEST_REPO}" //git@github.com:OGProgrammer/terraform-example-manifest.git
+    def manifest_repository = "${MANIFEST_REPO}" //git@github.com:alainetouches/terraform-example-manifest.git
 
     if (fileExists(directory)) {
         return directory
